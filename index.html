@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR WEDDING INVITATION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/d1f93ddedc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="title">
+        <div class="container">
+            <div class="title-text">
+                <h> OUR WEDDING INVITATION<br>Jason & Pih Jing
+                </h>
+            </div>
+    </div>
+
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <h1> If the sun were to rise in the west.<br><br>
+                    I'd never change my mind to love you forever. <br><br>
+                    I love you not for who you are, but for who i am before you.</h1>
+            </div>
+        </div>
+    </div>
+
+
+      
+    <div id="about">
+        <div class="container">
+            <div class="musicplay">
+                <audio id="myAudio" controls autoplay>
+                    <source src="music/Christina Perri - A Thousand Year.mp3" autoplay type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>   
+            </div>          
+        </div>
+    </div>
+
+    <div id="resume">
+        <div class="container">
+            <div class ="row">
+                <div class="image-col2">
+                    <img src="images/image4.jpg">
+                </div>
+                <div class="image-col3"> 
+                        <img src="images/image2.jpg">          
+                </div>         
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="video">
+        <div class="container">
+            <div class="video-text">
+                <video autoplay muted loop id="myVideo">
+                    <source src="images/video1.mov" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+    <p id="demo"></p>
+    <div class="timer">
+        <h2 id="time-text">Countdown to our wedding</h2>
+        <div id="countdown">
+            <ul>
+                <li><span id="days"></span>days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="time">
+        <div class="time-image">
+            <img src="images/calender.jpg">
+        </div>
+        <div class="time-text">    
+            <p><br><br>2024年9月22日 星期日 晚上7点正<br><br>
+            2024.9.22 Sun 7.00pm <br><br>喜来登酒楼 （沙登）Hee Lai Ton Restaurant<br>
+            12, Jalan Muhibbah 3, Taman Muhibbah,<br>43300 Seri Kembangan, Selangor<br><br>
+            Contact Number:
+            <br> Jason +6016-2156418 <br>
+            Pihjing +6010-2193622 
+
+            </p>
+        </div>   
+    </div>
+
+    <div id="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2536882775366!2d101.7089684768215!3d3.0264240969494614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdcb7517b07839%3A0x7cf19dca099b9f5b!2sHee%20Lai%20Ton%20Restaurant!5e0!3m2!1sen!2smy!4v1717519038186!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div id="contact">
+        <div class="invitation-form">
+            <form id="invitation-form" method="post" action="https://event.yongsoundentertainment.com/invitatizon-card/28102023-wai-loon-pei-yins-wedding-dinner" novalidate="novalidate">
+                <input type="hidden" name="_token" value="PteS4aBYHMCx7YpfOT8pqxR4fSPUHXzCcWUOSXqK">						
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="invitation-remark">
+                                请输入您的手机号码以方便在婚礼当天查询您的桌号.<br>
+                                Please enter your mobile phone number to check your table number on the wedding day.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="upper-text">Name 姓名</label>
+                                <input type="text" class="form-control detect-emoji-input" name="name" placeholder="Your Name" value="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="upper-text">Contact Number 电话号码</label>
+                                <input type="text" class="form-control" name="contact" placeholder="Sample:0123456789" value="">
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="upper-text">Relationship 关系</label>
+                            <select class="form-control" name="relationship" id="relationship" onchange="checkOtherRelationship(this)">
+                                <option selected="" disabled="">-- Select Relationship --</option>
+                                <option value="Family / Relatives">Family / Relatives</option>
+                                <option value="Schoolmates">Schoolmates</option>
+                                <option value="Colleagues">Colleagues</option>
+                                <option value="Friends">Friends</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="other-relationship-container" style="display:none;">
+                        <div class="form-group">
+                            <label class="upper-text">Other Relationship 关系</label>
+                            <input type="relationship" class="form-control" placeholder="Relationship" id="other-relationship" value="">
+                        </div>
+                    </div>
+                            <input type="hidden" name="rom_ceremony" value="0">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="upper-text">Number of Guest 参加人数</label>
+                            <select id="guest" class="form-control" name="guest" onchange="checkGuest(this)">
+                                <option selected="" disabled="">-- Select No. of Guest --</option>
+                                <option value="0">1 (Yourself only)</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12"></div>
+                    <div class="col-md-6 guest-1">
+                        <div class="form-group">
+                            <label>Guest Name 1</label>
+                            <input type="text" class="form-control guest_name guest_name_active" placeholder="Guest Name 1">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-1">
+                        <div class="form-group">
+                            <label>Contact Guest 1</label>
+                            <input type="text" class="form-control guest_contact guest_contact_active" placeholder="Contact Guest 1">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-2">
+                        <div class="form-group">
+                            <label>Guest Name 2</label>
+                            <input type="text" class="form-control guest_name guest_name_active" placeholder="Guest Name 2">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-2">
+                        <div class="form-group">
+                            <label>Contact Guest 2</label>
+                            <input type="text" class="form-control guest_contact guest_contact_active" placeholder="Contact Guest 2">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-3">
+                        <div class="form-group">
+                            <label>Guest Name 3</label>
+                            <input type="text" class="form-control guest_name guest_name_active" placeholder="Guest Name 3">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-3">
+                        <div class="form-group">
+                            <label>Contact Guest 3</label>
+                            <input type="text" class="form-control guest_contact guest_contact_active" placeholder="Contact Guest 3">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-4">
+                        <div class="form-group">
+                            <label>Guest Name 4</label>
+                            <input type="text" class="form-control guest_name guest_name_active" placeholder="Guest Name 4">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-4">
+                        <div class="form-group">
+                            <label>Contact Guest 4</label>
+                            <input type="text" class="form-control guest_contact guest_contact_active" placeholder="Contact Guest 4">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-5">
+                        <div class="form-group">
+                            <label>Guest Name 5</label>
+                            <input type="text" class="form-control guest_name guest_name_active" placeholder="Guest Name 5">
+                        </div>
+                    </div>
+                    <div class="col-md-6 guest-5">
+                        <div class="form-group">
+                            <label>Contact Guest 5</label>
+                            <input type="text" class="form-control guest_contact guest_contact_active" placeholder="Contact Guest 5">
+                        </div>
+                    </div> 
+                     
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="upper-text">Wishes 祝福语</label>
+                            <textarea class="form-control" name="wish" rows="5" placeholder="Write your wish here.."></textarea>
+                        </div>
+                    </div>
+                                                
+                                                <input type="hidden" name="question_status" id="question-status" value="">
+                                                <div id="guest"></div>
+                    <div class="col-md-12">
+                        <div class="submit-form">
+                            <button type="submit" class="btn-submit" id="invitation-form-submit">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2024 by OngTL</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("myAudio").loop = true;
+    </script>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxN1C2zdndk09mHqCCoB445OGEfNYZV9QnMB5OShKMV6FvJh2-Cmwv2peaTP8aYhPxg5g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""},5000)
+                    form.reset()
+                })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script>
+        (function () {
+            const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+             day = hour * 24;
+            //I'm adding this section so I don't have to keep updating this pen every year :-)
+            //remove this if you don't need it
+            let today = new Date(),
+            dd = String(today.getDate()).padStart(2, "0"),
+            mm = String(today.getMonth() + 1).padStart(2, "0"),
+            yyyy = today.getFullYear(),
+            nextYear = yyyy + 1,
+            dayMonth = "09/22/",
+            birthday = dayMonth + yyyy;
+            today = mm + "/" + dd + "/" + yyyy;
+            if (today > birthday) {
+            birthday = dayMonth + nextYear;
+            }
+            //end
+            const countDown = new Date(birthday).getTime(),
+            x = setInterval(function() {
+            const now = new Date().getTime(),
+            distance = countDown - now;
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+            //do something later when date is reached
+            if (distance < 0) {
+            document.getElementById("headline").innerText = "It's our wedding!";
+            document.getElementById("countdown").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            clearInterval(x);
+            }
+            //seconds
+            }, 0)
+        }());
+      </script>
+
+<script>
+    function checkOtherRelationship(e){
+        var relationship_value = $(e).val();
+
+        if(relationship_value == "Others"){
+            $('#other-relationship-container').css({
+                'display' : 'block',
+            });
+            $(e).removeAttr('name');
+            $('#other-relationship').attr('name','relationship');
+        }else{
+            $('#other-relationship-container').css({
+                'display' : 'none',
+            });
+            $(e).attr('name','relationship');
+            $('#other-relationship').removeAttr('name');
+        }
+    }
+
+    function checkGuest(e){
+        var guest_value = $(e).val();
+
+        $('.guest_name').removeAttr('name');
+        $('.guest_contact').removeAttr('name');
+
+        $('.guest_name').removeClass( "guest_name_active" );
+        $('.guest_contact').removeClass( "guest_contact_active" );
+        
+        if(guest_value != null){
+            for(let i=0; i < guest_value; i++){
+                $('.guest-'+(i+1)).find('.guest_name').attr('name', 'guest_name['+i+']');
+                $('.guest-'+(i+1)).find('.guest_contact').attr('name', 'guest_contact['+i+']');
+
+                $('.guest-'+(i+1)).find('.guest_name').addClass( "guest_name_active" );
+                $('.guest-'+(i+1)).find('.guest_contact').addClass( "guest_contact_active" );
+            }
+        }
+    }
+
+    $('#invitation-form-submit').click(function(){
+        // $.validator.addClassRules("guest_name_active", { required: true });
+        $.validator.addClassRules("guest_contact_active", { 
+            required: true,
+            regex: /^([0-9\s\-\+\(\)]*)$/
+        });
+    })
+</script>
+<script>
+     $(document).ready(function () {
+
+$.validator.addMethod('regex', function(value, element, param) {
+
+    return this.optional(element) ||
+
+        value.match(typeof param == 'string' ? new RegExp(param) : param);
+
+}, 'Please enter a valid format.');
+
+$('#invitation-form').validate({ // initialize the plugin
+    ignore: [],
+    rules: {
+        name: {
+            required: true
+        },
+        contact: {
+            required: true,
+            regex:/^([0-9\s\-\+\(\)]*)$/ 
+        },
+        relationship: {
+            required: true
+        },
+        guest: {
+            required: true
+        },
+        // "guest_name[]": {
+        //     required: true
+        // },
+        // "guest_contact[]": {
+        //     required: true,
+        //     regex:/^([0-9\s\-\+\(\)]*)$/ 
+        // },
+        // wish: {
+        //     required: true
+        // }
+    },
+
+    
+});
+
+$('#wedding-qr-form').validate({ // initialize the plugin
+    ignore: [],
+    rules: {
+        name: {
+            required: true
+        },
+        contact: {
+            required: true,
+            regex:/^([0-9\s\-\+\(\)]*)$/ 
+        },
+        email: {
+            required: true
+        },
+        wish: {
+            required: true
+        },
+    },
+
+    
+});
+
+$('#update-wedding-photo').validate({ // initialize the plugin
+    rules: {
+        caption: {
+            required: true
+        }
+    }
+});
+
+
+});
+</script>
+
+</body>
